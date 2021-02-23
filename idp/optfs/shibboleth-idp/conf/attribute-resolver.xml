@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<AttributeResolver
+  xmlns="urn:mace:shibboleth:2.0:resolver"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:custom="https://mimoto.co.uk/custom-dc/mimoto-custom-data-connector.xsd"
+  xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd
+                      https://mimoto.co.uk/custom-dc/mimoto-custom-data-connector.xsd https://mimoto.co.uk/custom-dc/mimoto-custom-data-connector.xsd">
+    <AttributeDefinition id="testAttribute" xsi:type="Simple">
+        <InputDataConnector ref="CustomDataConnector" />
+    </AttributeDefinition>
+
+        <custom:DataConnector id="CustomDataConnector" xsi:type="CustomDataConnector" />
+
+
+</AttributeResolver>
+
